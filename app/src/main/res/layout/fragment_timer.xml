@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/timerFragment"
+      android:layout_height="match_parent"
+      android:layout_width="match_parent"
+      android:padding="@dimen/spacing_normal"
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <TimePicker
+          android:id="@+id/spinner_time"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:timePickerMode="spinner"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner_time"
+            android:text="0 Second Left"
+            android:layout_marginBottom="@dimen/spacing_medium"/>
+
+        <Button
+          android:id="@+id/play_button"
+          style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:icon="@drawable/ic_baseline_play_arrow_24"
+          app:layout_constraintTop_toBottomOf="@id/timer"
+          android:layout_marginTop="30dp"
+          />
+
+        <Button
+            android:id="@+id/pause_button"
+            style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:icon="@drawable/ic_baseline_stop_24"
+            app:layout_constraintTop_toBottomOf="@id/timer"
+            android:layout_marginTop="30dp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
